@@ -1,0 +1,208 @@
+/* Core styles for the RGT Productions static site */
+
+:root {
+    /* Color palette based on the provided design system */
+    --color-bg-dark: #0A0C10;
+    --color-surface-dark: #12141B;
+    --color-text-primary-dark: #E6EDF7;
+    --color-text-secondary-dark: #9AA7BD;
+    --color-accent: #84F08D;
+    --color-accent-alt: #4DD2FF;
+    --color-border-dark: #202636;
+
+    /* Spacing scale */
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-large: 32px;
+
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg-dark);
+    color: var(--color-text-primary-dark);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-accent-alt);
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-surface-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-medium);
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+header .logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--color-accent);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--space-medium);
+}
+
+nav a {
+    color: var(--color-text-primary-dark);
+    font-weight: 500;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--color-accent);
+    color: var(--color-bg-dark);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button-secondary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-large);
+}
+
+.section {
+    margin-bottom: var(--space-large);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-medium);
+    padding: var(--space-large) 0;
+}
+
+.hero .actions {
+    display: flex;
+    gap: var(--space-medium);
+    flex-wrap: wrap;
+}
+
+.badges {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary-dark);
+}
+
+.value-props .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-medium);
+}
+
+.value-props .item {
+    background: var(--color-surface-dark);
+    padding: var(--space-medium);
+    border-radius: 12px;
+    border: 1px solid var(--color-border-dark);
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-medium);
+}
+
+.steps .step {
+    background: var(--color-surface-dark);
+    padding: var(--space-medium);
+    border-radius: 12px;
+    border: 1px solid var(--color-border-dark);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-medium);
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--color-border-dark);
+}
+
+footer {
+    background: var(--color-surface-dark);
+    padding: var(--space-large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-medium);
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-large);
+}
+
+.footer-columns ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 4px;
+}
+
+.social {
+    display: flex;
+    gap: var(--space-medium);
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary-dark);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: var(--space-medium);
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-border-dark);
+    background: var(--color-surface-dark);
+    color: var(--color-text-primary-dark);
+}
+
+form button {
+    align-self: flex-start;
+}
